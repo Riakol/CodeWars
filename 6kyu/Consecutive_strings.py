@@ -1,10 +1,7 @@
 def longest_consec(strarr, k):
-    if strarr and k < len(strarr) and k > 0:
-        for elem in range(len(strarr)):
-            strarr[elem] = ''.join(strarr[elem: k + elem])
-        return max(strarr, key=len)
-    else:
-        return ""
+    for elem in range(len(strarr)):
+        strarr[elem] = ''.join(strarr[elem: k + elem])
+    return max(strarr, key=len) if strarr and k < len(strarr) and k > 0 else ""
 
 
 '''
